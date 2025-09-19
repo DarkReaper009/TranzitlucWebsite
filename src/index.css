@@ -1,3 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: Grotesc;
+  src: url('../src/assets/Fonts/SpaceGrotesk-Medium.ttf');
+}
+@font-face {
+  font-family: Grotesc-bold;
+  src: url('../src/assets/Fonts/SpaceGrotesk-Bold.ttf');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('../src//assets//Fonts/Roboto-Regular.ttf');
+}
+@import "tailwindcss";
+
+@theme{
+  --tracking-h1:9.5%;
+  --tracking-sh2:20px;  
+  --color-brand:#1DA1F2;
+  --color-blue1:#0E33CB;
+  --color-b2:#1F45E4;
+  --color-db1:#121D50;
+  --color-db2:#090E23;
+  --color-gr2:#5C6C7B;
+  --color-gr1:#EDF0F3;
+  --text-sh2:0.9rem;
+  --text-b1:1.13rem;
+  --text-h2:3rem;
+  --text-h5:1.6rem;
+  --font-grotesc:Grotesc,"sans-serif";
+  --font-grotesc-bold:Grotesc-bold,"sans-serif";
+  --font-roboto:Roboto,"sans-serif";
+  --font-b1:Roboto,"sans-serif";
+  --font-sh2:Grotesc,"sans-serif";
+  --font-h5:Grotesc,"sans-serif";
+  --font-h2:Grotesc-bold,"sans-serif"
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* prevents horizontal scroll */
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -25,7 +73,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
+  /* font-family: "Space Grotesk", system-ui, sans-serif; */
   min-width: 320px;
   min-height: 100vh;
 }
