@@ -1,10 +1,9 @@
-
 .scroll-container {
-    overflow-x: auto; 
-  -ms-overflow-style: none;  /* IE/Edge */
-  scrollbar-width: none;     /* Firefox */
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .scroll-container::-webkit-scrollbar {
-    width: 0;
-  /* display: none; */
+  width: 0;
+  display: none;
 }
