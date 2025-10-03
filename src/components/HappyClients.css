@@ -7,3 +7,26 @@
   width: 0;
   display: none;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-button-next {
+  transform: translateX(100%);
+}
+
+.swiper-button-prev {
+  transform: translateX(-100%);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important; /* active bullet color */
+  /* width: 20px;
+  height: 20px;
+  opacity: 1; */
+}
+.swiper-pagination-bullet {
+  margin: 0 3px !important; /* adjust spacing */
+}

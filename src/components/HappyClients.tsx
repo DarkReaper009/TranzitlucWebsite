@@ -3,13 +3,19 @@
 import './HappyClients.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
+// import 'swiper/css';
+
 import 'swiper/swiper-bundle.css';
 //IMAGES
 import sofidel from '../assets/Images/sofidel_logo.svg';
 import stepone from '../assets/Images/stepone_logo.svg';
 import petstar from '../assets/Images/petstar_logo.svg';
 import elis from '../assets/Images/elis_logo.svg';
+import chleft from '../assets/Icons/chevron-left.svg';
+import chright from '../assets/Icons/chevron-right.svg';
+
+const clients = [sofidel, stepone, petstar, elis, elis, elis, elis];
 
 const HappyClients = () => {
   return (
@@ -17,84 +23,52 @@ const HappyClients = () => {
       <p className="text-sh2 text-white font-sh2 tracking-[2px]">
         CLIENTI MULTUMITI
       </p>
-      {/* <div className="slider-wrapper w-full overflow-x-auto h-40 flex items-center  "> */}
-      <Swiper
-        modules={[Navigation, Pagination]}
-        direction="horizontal"
-        slidesPerView={4}
-        spaceBetween={20}
-        navigation
-        pagination={{ clickable: true }}
-        breakpoints={{
-          320: { slidesPerView: 1 }, // mobile
-          640: { slidesPerView: 2 }, // small tablets
-          1024: { slidesPerView: 4 }, // desktop
-        }}
-        className="w-full h-40"
-      >
-        <SwiperSlide>
-          <div className="flex items-center justify-center h-full">
-            <img className="w-[18.3rem] h-20" src={sofidel} alt="" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex items-center justify-center h-full">
-            <img className="w-[18.3rem] h-20" src={stepone} alt="" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex items-center justify-center h-full">
-            <img className="w-[18.3rem] h-20" src={petstar} alt="" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex items-center justify-center h-full">
-            <img className="w-[18.3rem] h-20" src={elis} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex items-center justify-center h-full">
-            <img className="w-[18.3rem] h-20" src={elis} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex items-center justify-center h-full">
-            <img className="w-[18.3rem] h-20" src={elis} alt="" />
-          </div>
-        </SwiperSlide>
-      </Swiper>
-      {/* </div> */}
-      {/* <div className="slider-wrapper w-full overflow-x-auto h-40 flex items-center  ">
-        <ul
-       
-          className="card-list flex flex-nowrap gap-7 overflow-x-auto scrollbar-hide h-40 items-center list-none"
+      <div className="slider-wrapper w-full overflow-x-auto h-40 flex items-center ">
+        <div className="swiper-button-prev-custom absolute left-20 z-10 flex items-center justify-center w-10 h-10 rounded-full  cursor-pointer">
+          <img src={chleft} alt="" className="text-white w-8 h-8" />
+        </div>
+        <Swiper
+          modules={[Navigation, Pagination, EffectCoverflow]}
+          direction="horizontal"
+          slidesPerView={5}
+          spaceBetween={20}
+          navigation={{
+            prevEl: '.swiper-button-prev-custom',
+            nextEl: '.swiper-button-next-custom',
+          }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            320: { slidesPerView: 1 }, // mobile
+            640: { slidesPerView: 2 }, // small tablets
+            1024: { slidesPerView: 3 }, // desktop
+            1500: { slidesPerView: 4 }, // desktop
+            1700: { slidesPerView: 5 }, // desktop
+          }}
+          className="w-full h-40 px-14 "
         >
-          <li className="min-w-[18.3rem]">
-            <img className="w-[18.3rem] h-20" src={sofidel} alt="" />
-          </li>
-          <li className="min-w-[18.3rem]">
-            <img className="w-[18.3rem] h-20" src={stepone} alt="" />
-          </li>
-          <li className="min-w-[18.3rem]">
-            <img className="w-[18.3rem] h-20" src={petstar} alt="" />
-          </li>
-          <li className="min-w-[18.3rem]">
-            <img className="w-[18.3rem] h-20" src={elis} alt="" />
-          </li>
-          <li className="min-w-[18.3rem]">
-            <img className="w-[18.3rem] h-20" src={elis} alt="" />
-          </li>
-          <li className="min-w-[18.3rem]">
-            <img className="w-[18.3rem] h-20" src={petstar} alt="" />
-          </li>
-          <li className="min-w-[18.3rem]">
-            <img className="w-[18.3rem] h-20" src={petstar} alt="" />
-          </li>
-        </ul>
-      </div> */}
+          {clients.map((i) => {
+            return (
+              <SwiperSlide>
+                <div className="flex items-center justify-center h-full">
+                  <img className="w-[18.3rem] h-20" src={i} alt="" />
+                </div>
+              </SwiperSlide>
+            );
+          })}
+          {/* <div className="slider-controller">
+            <div className="swiper-button-prev slider-arrow">
+              <p>a</p>
+            </div>
+            <div className="swiper-button-prev slider-arrow">
+              <p>b</p>
+            </div>
+          </div> */}
+        </Swiper>
+        {/* Custom right arrow */}
+        <div className="swiper-button-next-custom absolute right-20 z-10 flex items-center justify-center w-10 h-10 rounded-full  cursor-pointer">
+          <img src={chright} alt="" className="text-white w-8 h-8" />
+        </div>
+      </div>
     </div>
   );
 };

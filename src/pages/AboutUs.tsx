@@ -2,8 +2,8 @@ import dotline from '../assets/Images/dot_line.svg';
 
 const AboutUs = () => {
   return (
-    <div className="h-[57rem] w-full  px-[9rem] py-[6.9rem]">
-      <div className="flex flex-col h-full w-full gap-11">
+    <div className="h-[57rem] w-full max-w-[1854px] mx-auto px-[9rem] py-[6.9rem]">
+      <div className="flex flex-col justify-center h-full w-full gap-11">
         <div className="flex flex-col gap-4 w-full h-[9.5rem]">
           <p className="text-sh2 text-blue1 font-sh2 leading-2.5">DESPRE NOI</p>
           <p className="text-h2 text-db1 font-h2 leading-[120%]">
