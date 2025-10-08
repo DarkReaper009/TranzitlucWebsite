@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import HappyClients from './components/HappyClients';
 import Works from './pages/Works';
 import GetQuote from './pages/GetQuote';
+import Footer from './components/Footer';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
       <HappyClients />
       <Works />
       <GetQuote />
+      <Footer />
     </div>
   );
 }

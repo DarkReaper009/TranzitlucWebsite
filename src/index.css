@@ -30,11 +30,13 @@
   --text-h3: 2.5rem;
   --text-h5: 1.6rem;
   --text-cap: 0.75rem;
+  --text-sh1: 1.12rem;
   --font-grotesc: Grotesc, 'sans-serif';
   --font-grotesc-bold: Grotesc-bold, 'sans-serif';
   --font-roboto: Roboto, 'sans-serif';
   --font-b1: Roboto, 'sans-serif';
   --font-sh2: Grotesc, 'sans-serif';
+  --font-sh1: Grotesc, 'sans-serif';
   --font-h5: Grotesc, 'sans-serif';
   --font-h3: Grotesc-bold, 'sans-serif';
   --font-h2: Grotesc-bold, 'sans-serif';
