@@ -19,12 +19,12 @@ const clients = [sofidel, stepone, petstar, elis, elis, elis, elis];
 
 const HappyClients = () => {
   return (
-    <div className="bg-b2 py-7  w-[100vw] h-[15.5rem] text-white flex flex-col items-center px-[9rem] sticky top-0 left-0 z-10">
+    <div className="bg-bl2 py-7  w-[100vw] h-[15.5rem] text-white flex flex-col items-center px-[2rem] sm:px-[6rem] lg:px-[9rem] sticky top-0 left-0 z-10">
       <p className="text-sh2 text-white font-sh2 tracking-[2px]">
         CLIENTI MULTUMITI
       </p>
       <div className="slider-wrapper w-full overflow-x-auto h-40 flex items-center ">
-        <div className="swiper-button-prev-custom absolute left-20 z-10 flex items-center justify-center w-10 h-10 rounded-full  cursor-pointer">
+        <div className="swiper-button-prev-custom absolute left-20 z-10 hidden md:flex md:items-center md:justify-center w-10 h-10 rounded-full  cursor-pointer ">
           <img src={chleft} alt="" className="text-white w-8 h-8" />
         </div>
         <Swiper
@@ -65,7 +65,7 @@ const HappyClients = () => {
           </div> */}
         </Swiper>
         {/* Custom right arrow */}
-        <div className="swiper-button-next-custom absolute right-20 z-10 flex items-center justify-center w-10 h-10 rounded-full  cursor-pointer">
+        <div className="swiper-button-next-custom absolute right-20 z-10 hidden md:flex md:items-center md:justify-center w-10 h-10 rounded-full  cursor-pointer">
           <img src={chright} alt="" className="text-white w-8 h-8" />
         </div>
       </div>

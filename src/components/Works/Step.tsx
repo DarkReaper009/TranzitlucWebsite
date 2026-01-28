@@ -15,10 +15,12 @@ const Step = ({ step, image, title, subtitle }: CardProps) => {
       </div>
       <img src={image} alt="" className="w-[8.25rem] h-[8.25rem] mt-3" />
       <div className="flex flex-col mt-8 items-center">
-        <p className="text-center text-h5 text-db1 font-grotesc-bold leading-[130%]">
+        <p className="text-center text-2xl sm:text-h5 text-db1 font-grotesc-bold leading-[130%]">
           {title}
         </p>
-        <p className="text-center text-b1 text-gr2 font-roboto">{subtitle}</p>
+        <p className="text-center text-[1rem] sm:text-b1 text-gr2 font-roboto">
+          {subtitle}
+        </p>
       </div>
     </div>
   );

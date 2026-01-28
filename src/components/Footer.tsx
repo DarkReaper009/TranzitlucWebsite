@@ -1,28 +1,15 @@
-// import React from "react"
-// import ReactDOM from "react-dom/client"
 import './Header.css';
 import logo from '../assets/Images/main_logo.svg';
 import footer_line from '../assets/Images/footer_line.svg';
 import phone from '../assets/Icons/contact_phone.svg';
 import email from '../assets/Icons/email.svg';
 import homelocation from '../assets/Icons/home-location.svg';
-
 const Footer = () => {
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
-  ];
-
   return (
     <div className="flex flex-col items-center min-h-[29rem] w-full bg-db2">
-      <div
-        className="bg-db2 w-[100vw] max-w-[1854px] mx-auto min-h-[29.35rem] text-white flex flex-col px-[9rem] py-16 z-10 gap-[2.70rem] "
-        //   style={{ position: '', width: '100%' }}
-      >
-        <div className="flex flex-row flex-wrap gap-[7.6rem]  justify-between ">
-          <div className="flex flex-col h-[20rem] w-[26.5rem] justify-end">
+      <div className="bg-db2 w-[100vw] max-w-[1854px] mx-auto min-h-[29.35rem] text-white flex flex-col px-[2rem] sm:px-[6rem] lg:px-[9rem] py-16 z-10 gap-[2.70rem] ">
+        <div className="flex flex-row flex-wrap gap-[5rem] xl:gap-[7.6rem]  justify-between ">
+          <div className="flex flex-col  w-[26.5rem] justify-end">
             <img src={logo} alt="" className="w-[25.06rem] h-[8.6rem]" />
             <p className="text-b1 font-b1 ">
               Ne-am înființat compania în 2008. Suntem o afacere de familie din
@@ -31,17 +18,26 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-row flex-wrap gap-[4.5rem] items-end ">
-            <div className="flex flex-col gap-[1.25rem] h-[11.6rem] ">
+            {/* <div className="flex flex-col gap-[1.25rem] h-[11.6rem] ">
               <p className="text-h5 font-grotesc-bold leading-[130%]">
                 NAVIGATIE
               </p>
               <div className="flex flex-col gap-2">
-                {navLinks.map(({ name }) => {
-                  return <p className="text-b1 font-b1">{name}</p>;
+                {navigation.map((item) => {
+                  return (
+                    <a
+                      key={item.id}
+                      href={item.url}
+                      className={` text-b1 font-b1 text-white transition-colors  ${item.url === pathname.hash ? 'z-2 xl:text-white' : 'xl:text-white/50'}  hover:text-org`}
+                      // onClick={handleClick}
+                    >
+                      {item.title}
+                    </a>
+                  );
                 })}
               </div>
-            </div>
-            <div className="flex flex-col gap-4 h-[11.6rem] w-[26.5rem]">
+            </div> */}
+            <div className="flex flex-col gap-4 h-[11.6rem] max-w-[26.5rem]">
               <p className="text-h5 font-grotesc-bold leading-[130%]">
                 CONTACT
               </p>
@@ -60,7 +56,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-row h-[2.5rem] w-[26.5rem] gap-5 items-center">
                   <img src={homelocation} alt="" />
-                  <p className="font-grotesc-bold text-2xl leading-[130%] tracking-h1 w-[27rem]">
+                  <p className="font-grotesc-bold text-[1.4rem] sm:text-2xl leading-[130%] tracking-h1 w-[27rem]">
                     STR. ROCADEI 77, CĂLĂRAȘI
                   </p>
                 </div>
@@ -71,7 +67,7 @@ const Footer = () => {
         <img src={footer_line} alt="" className="w-full h-0.5" />
         <div className="flex w-full ">
           <p className="text-sh1 font-semibold font-sh1">
-            COPYRIGHT © 2024 TRANZITLUC
+            COPYRIGHT © {new Date().getFullYear()} TRANZITLUC
           </p>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Step from '../components/Works/Step';
 import document from '../assets/Images/document.svg';
 import phone from '../assets/Images/phone.svg';
 import location from '../assets/Images/location.svg';
+import Section from '../components/Section';
 
 type steps = {
   step: string;
@@ -39,34 +40,43 @@ const steps = [
 
 const Works = () => {
   return (
-    <div className="h-[65.6rem] w-full max-w-[1854px] mx-auto px-[9rem] py-[6.9rem] relative">
-      <div className="flex flex-col  h-full w-full gap-11 ">
-        <div className="flex flex-col w-[36rem] mt-11 gap-4">
-          <p className="text-sh2 text-blue1 font-sh2 leading-2.5">
-            CUM FUNCTIONEAZA
-          </p>
-          <p className="text-h3 text-db1 tracking-normal leading-[130%] font-h3">
-            SIMPLIFICĂ PROCESUL DE EXPEDIERE CU AJUTORUL METODEI NOASTRE RAPIDE
-            ȘI EFICIENTE.
-          </p>
-        </div>
-        <img src={map} alt="" className="absolute top-0 right-0" />
-        <img src={line} alt="" className="mt-[6rem] " />
+    <Section
+      id="works"
+      customPaddings="py-[6rem] 2xl:py-[6.9rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
+    >
+      <div className=" w-full max-w-[1854px] mx-auto">
+        <div className="flex flex-col items-center xl:items-start h-full w-full gap-5 xl:gap-11 ">
+          <div className="flex flex-col max-w-[36rem] xl:mt-11 gap-4">
+            <p className="text-sh2 text-blue1 text-center xl:text-start font-sh2 leading-2.5">
+              CUM FUNCTIONEAZA
+            </p>
+            <p className="text-[2rem] sm:text-h3 text-db1 text-center xl:text-start tracking-normal leading-[130%] font-h3 ">
+              SIMPLIFICĂ PROCESUL DE EXPEDIERE CU AJUTORUL METODEI NOASTRE
+              RAPIDE ȘI EFICIENTE.
+            </p>
+          </div>
+          <img
+            src={map}
+            alt=""
+            className="w-full sm:w-[40rem] xl:w-[44.3rem] xl:absolute xl:top-0 xl:right-0"
+          />
+          <img src={line} alt="" className="w-full h-4  xl:mt-[6rem] " />
 
-        <div className="w-full h-[25rem] flex flex-row justify-evenly gap-[7.5rem] ">
-          {steps.map(({ step, image, title, subtitle }) => {
-            return (
-              <Step
-                step={step}
-                image={image}
-                subtitle={subtitle}
-                title={title}
-              />
-            );
-          })}
+          <div className="w-full  flex flex-row flex-wrap justify-evenly gap-[4.5rem] ">
+            {steps.map(({ step, image, title, subtitle }) => {
+              return (
+                <Step
+                  step={step}
+                  image={image}
+                  subtitle={subtitle}
+                  title={title}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 export default Works;
