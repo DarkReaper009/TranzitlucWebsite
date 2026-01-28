@@ -75,7 +75,7 @@ body {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   /* place-items: center; */
   /* font-family: "Space Grotesk", system-ui, sans-serif; */
   min-width: 320px;

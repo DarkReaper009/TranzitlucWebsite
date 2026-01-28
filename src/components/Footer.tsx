@@ -7,7 +7,7 @@ import homelocation from '../assets/Icons/home-location.svg';
 const Footer = () => {
   return (
     <div className="flex flex-col items-center min-h-[29rem] w-full bg-db2">
-      <div className="bg-db2 w-[100vw] max-w-[1854px] mx-auto min-h-[29.35rem] text-white flex flex-col px-[2rem] sm:px-[6rem] lg:px-[9rem] py-16 z-10 gap-[2.70rem] ">
+      <div className="bg-db2 w-full max-w-[1854px] mx-auto min-h-[29.35rem] text-white flex flex-col px-[2rem] sm:px-[6rem] lg:px-[9rem] py-16 z-10 gap-[2.70rem] ">
         <div className="flex flex-row flex-wrap gap-[5rem] xl:gap-[7.6rem]  justify-between ">
           <div className="flex flex-col  w-[26.5rem] justify-end">
             <img src={logo} alt="" className="w-[25.06rem] h-[8.6rem]" />

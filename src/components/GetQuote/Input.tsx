@@ -2,7 +2,7 @@ type Input = {
   placeholder: string;
   value: string;
 };
-const Input = ({ value, placeholder }: Input) => {
+const Input = ({ placeholder }: Input) => {
   return (
     <input
       type="text"

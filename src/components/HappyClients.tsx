@@ -19,7 +19,7 @@ const clients = [sofidel, stepone, petstar, elis, elis, elis, elis];
 
 const HappyClients = () => {
   return (
-    <div className="bg-bl2 py-7  w-[100vw] h-[15.5rem] text-white flex flex-col items-center px-[2rem] sm:px-[6rem] lg:px-[9rem] sticky top-0 left-0 z-10">
+    <div className="bg-bl2 py-7  w-full h-[15.5rem] text-white flex flex-col items-center px-[2rem] sm:px-[6rem] lg:px-[9rem] sticky top-0 left-0 z-10">
       <p className="text-sh2 text-white font-sh2 tracking-[2px]">
         CLIENTI MULTUMITI
       </p>
