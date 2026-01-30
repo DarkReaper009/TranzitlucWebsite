@@ -15,7 +15,12 @@ const Home = () => {
         className={` lg:[clip-path:polygon(0_0,_100%_0,_100%_60%,_0%_100%)] bg-[#121D50] h-[calc(100vh-8rem)] lg:h-screen max-h-[950px] max-w-[1854px] mx-auto pt-0.5 `}
       >
         {/* <div className="w-[65rem] h-full bg-amber-900 flex flex-col items-center justify-center mt-22"> */}
-        <div className="flex flex-col justify-center sm:flex sm:justify-center h-full mt-5 sm:mt-0 lg:block lg:mt-20 xl:mt-30">
+        <div
+          // OLD: lg:mt-20 xl:mt-30 (These fixed units caused the desync)
+          // NEW: lg:pt-[15vh] (Dynamic spacing based on screen height)
+          // REMOVED: "justify-center" on large screens to allow manual placement via padding
+          className="flex flex-col justify-center sm:justify-center h-full mt-5 sm:mt-0 lg:block lg:pt-[15vh]"
+        >
           <div className="w-full h-flex flex flex-col justify-evenly">
             <div className=" mb-6">
               <p className="text-white font-grotesc text-[0.9rem] sm:text-[1.1rem] md:text-[1.1rem] lg:text-[1.1rem] mb-[1rem] tracking-widest">
@@ -61,8 +66,16 @@ const Home = () => {
       <img
         src={truck}
         alt="err"
-        className="hidden absolute right-0 top-30 h-[35rem] w-[34rem] 2xl:flex "
+        // OLD: bottom-60 (Fixed unit caused the drift)
+        // NEW: top-[60%] (Matches the clip-path vertex)
+        // NEW: -translate-y-[85%] (Pulls the truck up to sit ON the line)
+        className="hidden absolute right-5 top-[65%] -translate-y-[85%] h-[35rem] w-[34rem] 2xl:flex"
       />
+      {/* <img
+        src={truck}
+        alt="err"
+        className="hidden absolute right-0 bottom-60 h-[35rem] w-[34rem] 2xl:flex "
+      /> */}
     </Section>
     // </div>
   );
