@@ -6,16 +6,14 @@ const GetQuote = () => {
   return (
     <Section
       id="get-a-quote"
-      customPaddings="py-[6rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
+      customPaddings="py-[4rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
       customScroll="scroll-mt-4"
-      className=" bg-gr1 "
+      className=" bg-gr1 min-h-screen flex items-center justify-center"
     >
-      {/* <div className="flex flex-row items-center   w-full max-w-[1854px] mx-auto"> */}
-      <div className="flex flex-row flex-wrap gap-15 min-[1360px]:gap-0 w-full max-w-[1854px] mx-auto h-full items-center justify-center">
+      <div className="flex flex-row flex-wrap gap-12 min-[1360px]:gap-0 w-full max-w-[1854px] mx-auto justify-center items-stretch">
         <WhyUs />
         <RequestOffer />
       </div>
-      {/* </div> */}
     </Section>
   );
 };

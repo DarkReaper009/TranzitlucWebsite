@@ -2,21 +2,26 @@ import { useEffect, useState } from 'react'; // Importing React hooks: useEffect
 
 // Defining the expected properties (props) for this component.
 interface CountUpProps {
-  end: number;        // The final number to stop at (e.g., 225).
-  duration?: number;  // Optional: How long the animation takes in milliseconds.
-  suffix?: string;    // Optional: A string to add after the number (e.g., "+").
+  end: number; // The final number to stop at (e.g., 225).
+  duration?: number; // Optional: How long the animation takes in milliseconds.
+  suffix?: string; // Optional: A string to add after the number (e.g., "+").
   easing?: 'easeOutExpo' | 'linear' | 'easeOutQuad'; // Optional: The easing function to use.
 }
 
 // The Component definition. Defaults: duration is 2000ms (2s), suffix is empty, easing is 'easeOutExpo'.
-const CountUp = ({ end, duration = 2000, suffix = '', easing = 'easeOutExpo' }: CountUpProps) => {
+const CountUp = ({
+  end,
+  duration = 2000,
+  suffix = '',
+  easing = 'easeOutExpo',
+}: CountUpProps) => {
   // State variable 'count' holds the current number being displayed. Starts at 0.
   const [count, setCount] = useState(0);
 
   // useEffect triggers the animation logic whenever 'end', 'duration' or 'easing' changes.
   useEffect(() => {
     let startTime: number | null = null; // Variable to track when the animation loop starts.
-    let animationFrameId: number;        // Stores the ID of the requested frame so we can cancel it later.
+    let animationFrameId: number; // Stores the ID of the requested frame so we can cancel it later.
 
     // This function runs on every frame of the animation.
     const animate = (timestamp: number) => {
@@ -44,8 +49,8 @@ const CountUp = ({ end, duration = 2000, suffix = '', easing = 'easeOutExpo' }: 
         // Linear: Constant speed. Good for small numbers to show every step.
         easeValue = percentage;
       }
-      
-      // Update the state with the current number. 
+
+      // Update the state with the current number.
       // Math.floor removes decimals (we only want whole numbers).
       setCount(Math.floor(easeValue * end));
 
@@ -68,8 +73,9 @@ const CountUp = ({ end, duration = 2000, suffix = '', easing = 'easeOutExpo' }: 
   // Render the component.
   return (
     <>
-      {count}  {/* Display the current animated number */}
-      {suffix} {/* Display the suffix (like "+") immediately after the number */}
+      {count} {/* Display the current animated number */}
+      {suffix}{' '}
+      {/* Display the suffix (like "+") immediately after the number */}
     </>
   );
 };

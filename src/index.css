@@ -119,13 +119,12 @@ h1 {
 @keyframes slideInLeftFade {
   from {
     opacity: 0.3;
-    transform: translateX(-50px) ;
+    transform: translateX(-50px);
     /* transform: translateY(20px); */
   }
   to {
     opacity: 1;
     transform: translateX(0);
-    
   }
 }
 
@@ -154,15 +153,34 @@ h1 {
 @keyframes fadeIn {
   from {
     opacity: 0;
-  
+
     /* transform: translateY(20px); */
   }
   to {
-    opacity: 1;  
+    opacity: 1;
   }
 }
+
+@keyframes dropBoxFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .fadeIn {
   animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.dropBoxFadeIn {
+  animation-name: dropBoxFadeIn;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: both;
@@ -195,4 +213,165 @@ h1 {
 
 .animation-delay-600 {
   animation-delay: 0.6s;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up-fade {
+  animation-name: slideUpFade;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideDownFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.animate-slide-down-fade-out {
+  animation-name: slideDownFadeOut;
+  animation-timing-function: ease-in;
+}
+
+@keyframes tactileEntrance {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(10deg) translateY(50px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(-2deg) translateY(-10px) scale(1.02);
+  }
+  80% {
+    transform: perspective(1000px) rotateX(1deg) translateY(2px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0) translateY(0) scale(1);
+  }
+}
+
+.animate-tactile-entrance {
+  animation-name: tactileEntrance;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes tactileExit {
+  0% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(10deg) translateY(50px) scale(0.9);
+  }
+}
+
+.animate-tactile-exit {
+  animation-name: tactileExit;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes dropBoxFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+}
+
+.dropBoxFadeOut {
+  animation-name: dropBoxFadeOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+@keyframes riseBoxFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.riseBoxFadeIn {
+  animation-name: riseBoxFadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes boxFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-box-float {
+  animation: boxFloat 3s ease-in-out infinite;
+}
+
+@keyframes slideInBottomLeftFade {
+  from {
+    opacity: 0;
+    transform: translate(-50px, 50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.animate-slide-in-bottom-left {
+  animation-name: slideInBottomLeftFade;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slideOutBottomLeftFade {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50px, 50px);
+  }
+}
+
+.animate-slide-out-bottom-left {
+  animation-name: slideOutBottomLeftFade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
 }
