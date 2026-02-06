@@ -1,5 +1,3 @@
-// import React from "react"
-// import ReactDOM from "react-dom/client"
 import './HappyClients.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,10 +7,10 @@ import {
   EffectCoverflow,
   Autoplay,
 } from 'swiper/modules';
-// import 'swiper/css';
 
 import 'swiper/swiper-bundle.css';
-//IMAGES
+
+// IMAGES
 import sofidel from '../assets/Images/sofidel_logo.svg';
 import stepone from '../assets/Images/stepone_logo.svg';
 import petstar from '../assets/Images/petstar_logo.svg';
@@ -21,6 +19,7 @@ import klg from '../assets/Images/klg_logo.svg';
 import adeplast from '../assets/Images/adeplast_logo.svg';
 import altex from '../assets/Images/altex_logo.svg';
 import dbschenker from '../assets/Images/dbschenker_logo.svg';
+
 import chleft from '../assets/Icons/chevron-left.svg';
 import chright from '../assets/Icons/chevron-right.svg';
 import KineticText from './KineticText';
@@ -47,7 +46,7 @@ const HappyClients = () => {
       </KineticText>
       <div className="slider-wrapper w-full overflow-x-auto h-40 flex items-center ">
         <div className="swiper-button-prev-custom absolute left-20 z-10 hidden md:flex md:items-center md:justify-center w-10 h-10 rounded-full  cursor-pointer ">
-          <img src={chleft} alt="" className="text-white w-8 h-8" />
+          <img src={chleft} alt="Previous" className="text-white w-8 h-8" />
         </div>
         <Swiper
           modules={[Navigation, Pagination, EffectCoverflow, Autoplay]}
@@ -73,32 +72,27 @@ const HappyClients = () => {
           }}
           className="w-full h-40 px-14 "
         >
-          {clients.map((i) => {
+          {clients.map((logo, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <div className="flex items-center justify-center h-full">
-                  <img className="w-[18.3rem] h-20 bg-white" src={i} alt="" />
+                  <img
+                    className="w-[18.3rem] h-20 bg-white"
+                    src={logo}
+                    alt="Client Logo"
+                  />
                 </div>
               </SwiperSlide>
             );
           })}
-          {/* <div className="slider-controller">
-            <div className="swiper-button-prev slider-arrow">
-              <p>a</p>
-            </div>
-            <div className="swiper-button-prev slider-arrow">
-              <p>b</p>
-            </div>
-          </div> */}
         </Swiper>
         {/* Custom right arrow */}
         <div className="swiper-button-next-custom absolute right-20 z-10 hidden md:flex md:items-center md:justify-center w-10 h-10 rounded-full  cursor-pointer">
-          <img src={chright} alt="" className="text-white w-8 h-8" />
+          <img src={chright} alt="Next" className="text-white w-8 h-8" />
         </div>
       </div>
     </div>
   );
 };
-// to do de realizate HappyClientsul aplicatiei
 
 export default HappyClients;

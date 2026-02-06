@@ -40,15 +40,17 @@ const KineticText: React.FC<KineticTextProps> = ({
       observer.observe(elementRef.current);
     }
 
+    const currentElement = elementRef.current;
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);
 
   return (
     <Tag
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ref={elementRef as any}
       className={`${className} flex flex-wrap content-start`}
     >

@@ -1,6 +1,7 @@
 import KineticText from '../components/KineticText';
 import Section from '../components/Section';
 import BoxAnimation from '../components/Services/BoxAnimation';
+import SEO from '../components/SEO';
 
 const Services = () => {
   return (
@@ -9,7 +10,11 @@ const Services = () => {
       customPaddings="py-[6rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
       className=" bg-gr1 "
     >
-      {/* <div className="flex flex-col items-center h-full w-full  bg-gr1"> */}
+      <SEO
+        title="Servicii"
+        description="Servicii de transport marfa eficiente si de incredere. Transport cu camionul si solutii logistice personalizate in sud-estul Romaniei."
+        keywords="servicii transport, transport camion, logistica, transport marfa"
+      />
       <div className="flex flex-col items-center w-full gap-16 max-w-[1854px] mx-auto">
         <div className="flex flex-col items-center gap-4  px-4 max-w-[50rem] min-h-[10rem]">
           <KineticText
@@ -45,7 +50,6 @@ const Services = () => {
             </KineticText>
           </div>
         </div>
-        {/* </div> */}
       </div>
     </Section>
   );

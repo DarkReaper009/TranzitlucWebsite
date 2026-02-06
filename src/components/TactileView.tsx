@@ -34,15 +34,17 @@ const TactileView: React.FC<TactileViewProps> = ({
       observer.observe(elementRef.current);
     }
 
+    const currentElement = elementRef.current;
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);
 
   return (
     <Tag
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ref={elementRef as any}
       className={`${className} ${isVisible ? 'animate-tactile-entrance' : hasAnimated ? 'animate-tactile-exit' : 'opacity-0'} hover:scale-105 hover:shadow-2xl hover:bg-db1 transition-all duration-300 ease-out cursor-pointer`}
       style={{ animationDelay: `${delay}s` }}

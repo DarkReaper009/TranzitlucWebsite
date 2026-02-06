@@ -1,4 +1,3 @@
-import './Header.css';
 import logo from '../assets/Images/main_logo.svg';
 import footer_line from '../assets/Images/footer_line.svg';
 import phone from '../assets/Icons/contact_phone.svg';

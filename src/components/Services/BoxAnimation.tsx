@@ -32,9 +32,10 @@ const BoxAnimation = () => {
       observer.observe(boxRef.current);
     }
 
+    const currentBox = boxRef.current;
     return () => {
-      if (boxRef.current) {
-        observer.unobserve(boxRef.current);
+      if (currentBox) {
+        observer.unobserve(currentBox);
       }
     };
   }, []);

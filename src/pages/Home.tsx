@@ -1,10 +1,9 @@
-// import './Header.css'
-// import logo from '../assets/Images/main_logo.svg'
 import dotline from '../assets/Images/dot_line.svg';
 import truck from '../assets/Images/blue_truck.svg';
 import Section from '../components/Section';
 import CountUp from '../components/CountUp';
 import { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const [isTruckVisible, setIsTruckVisible] = useState(true);
@@ -30,10 +29,11 @@ const Home = () => {
       customPaddings="pt-[6rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
       className="h-screen bg-db1 lg:[clip-path:polygon(0_0,_100%_0,_100%_60%,_0%_100%)] sm:flex sm:items-center md:block lg:block"
     >
-      {/* <div
-        className={` lg:[clip-path:polygon(0_0,_100%_0,_100%_60%,_0%_100%)] bg-[#121D50] h-[calc(100vh-8rem)] lg:h-screen max-h-[950px] max-w-[1854px] mx-auto pt-0.5 `}
-      > */}
-      {/* <div className="w-[65rem] h-full bg-amber-900 flex flex-col items-center justify-center mt-22"> */}
+      <SEO
+        title="Acasa"
+        description="Partenerul tau de incredere pentru servicii logistice de top. Optimizeaza-ti transporturile cu Tranzitluc."
+        keywords="transport, logistica, expeditie, marfa, Romania, transport marfa"
+      />
       <div className="flex flex-col justify-center sm:justify-center h-full mt-5 sm:mt-0 lg:block lg:pt-[15vh]">
         <div
           id="main-txt"
@@ -83,7 +83,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
       <div className="hidden absolute right-5 top-[65%] -translate-y-[85%] 2xl:flex">
         <img
           src={truck}
@@ -91,20 +90,8 @@ const Home = () => {
           className={`h-[40rem] w-[39rem] ${isTruckVisible ? 'animate-slide-in-right' : 'animate-slide-out-right'}`}
         />
       </div>
-      {/* <img
-        src={truck}
-        alt="err"
-        className="hidden absolute right-0 bottom-60 h-[35rem] w-[34rem] 2xl:flex "
-      /> */}
     </Section>
-    // </div>
   );
 };
-// to do de realizate headerul aplicatiei
-//     <div style={{
-//     backgroundImage: `url(${require("../assets/Images/main_logo.svg")})`,
-//   }} className={`bg-[#121D50] w-full h-[90vh] items-center justify-center bg-no-repeat bg-center bg-cover`} >
-//   <p>this is</p>
 
-//     </div>
 export default Home;

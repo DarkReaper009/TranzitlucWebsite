@@ -7,6 +7,7 @@ import phone from '../assets/Images/phone.svg';
 import location from '../assets/Images/location.svg';
 import Section from '../components/Section';
 import KineticText from '../components/KineticText';
+import SEO from '../components/SEO';
 
 type StepType = {
   step: string;
@@ -103,6 +104,11 @@ const Works = () => {
       id="works"
       customPaddings="py-[6rem] 2xl:py-[6.9rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
     >
+      <SEO
+        title="Cum Functioneaza"
+        description="Vezi cum poti solicita rapid servicii de transport de la Tranzitluc. Pasi simpli pentru o colaborare eficienta."
+        keywords="proces transport, pasi colaborare, oferta transport, solicitare oferta"
+      />
       <div className=" w-full max-w-[1854px] mx-auto">
         <div className="flex flex-col items-center xl:items-start h-full w-full gap-5 xl:gap-11 ">
           <div className="flex flex-col max-w-[36rem] xl:mt-11 gap-4">
