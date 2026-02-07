@@ -186,7 +186,7 @@ const RequestOffer = () => {
       };
 
       try {
-        const response = await fetch('https://api.tranzitluc.com', {
+        const response = await fetch('https://api.tranzitluc.com/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
