@@ -186,7 +186,7 @@ const RequestOffer = () => {
       };
 
       try {
-        const response = await fetch('http://localhost:8000/api/contact', {
+        const response = await fetch('https://api.tranzitluc.com', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
