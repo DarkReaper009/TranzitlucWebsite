@@ -2,7 +2,6 @@ import dotline from '../assets/Images/dot_line.svg';
 import Section from '../components/Section';
 import KineticText from '../components/KineticText';
 import TactileView from '../components/TactileView';
-import SEO from '../components/SEO';
 
 const AboutUs = () => {
   return (
@@ -12,11 +11,6 @@ const AboutUs = () => {
       customScroll="scroll-mt-10"
       className="2xl:h-screen"
     >
-      <SEO
-        title="Despre Noi"
-        description="Afla mai multe despre Tranzitluc, o companie de transport de familie cu peste 16 ani de experienta. Servicii logistice in sud-estul Romaniei."
-        keywords="despre noi, Tranzitluc, istorie companie, transport Romania, experienta logistica"
-      />
       <div className="h-full w-full max-w-[1854px] mx-auto">
         <div className="flex flex-col justify-center h-full w-full gap-11">
           <div className="flex flex-col gap-4 w-full lg:h-[9.5rem]">

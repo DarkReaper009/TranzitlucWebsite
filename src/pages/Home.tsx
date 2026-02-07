@@ -30,9 +30,9 @@ const Home = () => {
       className="h-screen bg-db1 lg:[clip-path:polygon(0_0,_100%_0,_100%_60%,_0%_100%)] sm:flex sm:items-center md:block lg:block"
     >
       <SEO
-        title="Acasa"
-        description="Partenerul tau de incredere pentru servicii logistice de top. Optimizeaza-ti transporturile cu Tranzitluc."
-        keywords="transport, logistica, expeditie, marfa, Romania, transport marfa"
+        title="Tranzitluc - Servicii de Transport Marfa & Logistica"
+        description="Tranzitluc - Partenerul tau de incredere pentru servicii logistice de top in Romania. Transport marfa eficient, sigur si rapid. Afacere de familie din 2008."
+        keywords="transport, logistica, expeditie, marfa, Romania, transport marfa, servicii transport, camioane, oferta transport"
       />
       <div className="flex flex-col justify-center sm:justify-center h-full mt-5 sm:mt-0 lg:block lg:pt-[15vh]">
         <div

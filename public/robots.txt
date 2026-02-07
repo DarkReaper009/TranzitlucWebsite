@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tranzitluc.ro/sitemap.xml
