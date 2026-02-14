@@ -6,7 +6,7 @@ import homelocation from '../assets/Icons/home-location.svg';
 const Footer = () => {
   return (
     <div className="flex flex-col items-center min-h-[29rem] w-full bg-db2">
-      <div className="bg-db2 w-[100vw] max-w-[1854px] mx-auto min-h-[29.35rem] text-white flex flex-col px-[2rem] sm:px-[6rem] lg:px-[9rem] py-16 z-10 gap-[2.70rem] ">
+      <div className="bg-db2 w-full max-w-[1854px] mx-auto min-h-[29.35rem] text-white flex flex-col px-[2rem] sm:px-[4rem] lg:px-[6rem] py-16 z-10 gap-[2.70rem] ">
         <div className="flex flex-row flex-wrap gap-[5rem] xl:gap-[7.6rem]  justify-between ">
           <div className="flex flex-col  w-[26.5rem] justify-end">
             <img src={logo} alt="" className="w-[25.06rem] h-[8.6rem]" />
@@ -17,25 +17,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-row flex-wrap gap-[4.5rem] items-end ">
-            {/* <div className="flex flex-col gap-[1.25rem] h-[11.6rem] ">
-              <p className="text-h5 font-grotesc-bold leading-[130%]">
-                NAVIGATIE
-              </p>
-              <div className="flex flex-col gap-2">
-                {navigation.map((item) => {
-                  return (
-                    <a
-                      key={item.id}
-                      href={item.url}
-                      className={` text-b1 font-b1 text-white transition-colors  ${item.url === pathname.hash ? 'z-2 xl:text-white' : 'xl:text-white/50'}  hover:text-org`}
-                      // onClick={handleClick}
-                    >
-                      {item.title}
-                    </a>
-                  );
-                })}
-              </div>
-            </div> */}
+
             <div className="flex flex-col gap-4 h-[11.6rem] max-w-[26.5rem]">
               <p className="text-h5 font-grotesc-bold leading-[130%]">
                 CONTACT

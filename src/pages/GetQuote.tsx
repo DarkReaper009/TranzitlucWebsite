@@ -6,7 +6,7 @@ const GetQuote = () => {
   return (
     <Section
       id="get-a-quote"
-      customPaddings="py-[4rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
+      customPaddings="py-[4rem] px-[2rem] sm:px-[4rem] lg:px-[6rem]"
       customScroll="scroll-mt-4"
       className=" bg-gr1 min-h-screen flex items-center justify-center"
     >

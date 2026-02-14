@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <Section
       id="about-us"
-      customPaddings="py-[6rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
+      customPaddings="py-[6rem] px-[2rem] sm:px-[4rem] lg:px-[6rem]"
       customScroll="scroll-mt-10"
       className="2xl:h-screen"
     >

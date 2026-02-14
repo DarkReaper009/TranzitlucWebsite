@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <Section
       id="services"
-      customPaddings="py-[6rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
+      customPaddings="py-[6rem] px-[2rem] sm:px-[4rem] lg:px-[6rem]"
       className=" bg-gr1 "
     >
       <div className="flex flex-col items-center w-full gap-16 max-w-[1854px] mx-auto">

@@ -76,7 +76,7 @@ const Header = () => {
     <div
       className={`fixed top-0 left-0 right-0 z-50 bg-[#121D50]/90 xl:bg-[#121D50]/90 xl:backdrop-blur-sm w-[100vw]  mx-auto h-24 text-white flex flex-row ${openNavigation ? 'bg-db1' : 'bg-db1/90 backdrop-blur-sm'} `}
     >
-      <div className="flex items-center px-[2rem] sm:px-[6rem] lg:px-[9rem] w-screen">
+      <div className="flex items-center px-[2rem] sm:px-[4rem] lg:px-[6rem] w-screen">
         <Link
           to="#home"
           className="logo-container flex items-center h-[100%] w-[50%]"

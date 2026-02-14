@@ -101,7 +101,7 @@ const Works = () => {
   return (
     <Section
       id="works"
-      customPaddings="py-[6rem] 2xl:py-[6.9rem] px-[2rem] sm:px-[6rem] lg:px-[9rem]"
+      customPaddings="py-[6rem] 2xl:py-[6.9rem] px-[2rem] sm:px-[4rem] lg:px-[6rem]"
     >
       <div className=" w-full max-w-[1854px] mx-auto">
         <div className="flex flex-col items-center xl:items-start h-full w-full gap-5 xl:gap-11 ">
